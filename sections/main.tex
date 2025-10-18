@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\setlength{\parindent}{0pt}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{lipsum}
+\usepackage[left=0.5cm,top=0.5cm,right=0.5cm,bottom=0.5cm]{geometry}
+\usepackage{subfiles}
+\usepackage{xcolor} % For custom link colors
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} % Font Family
+
+\renewcommand{\rmdefault}{lmss}
+
+\definecolor{urlcolor}{HTML}{005ce6}
+\definecolor{h1color}{HTML}{008080}
+\definecolor{h2color}{HTML}{008080}
+
+\newcommand{\ulhref}[2]{\href{#1}{\underline{#2}}}
+\newcommand{\boldhuge}[1]{\textbf{\huge{\textcolor{h1color}{#1}}}}
+\newcommand{\boldLarge}[1]{\textbf{\Large{\textcolor{h2color}{#1}}}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=teal,
+    filecolor=magenta,      
+    urlcolor=urlcolor,
+    pdftitle={Resume},
+    pdfpagemode=FullScreen,
+}
+
+\begin{document}
+
+% Importing header section
+\subfile{sections/header}
+
+% Importing skills section
+\subfile{sections/skills}
+
+% Importing work experience
+\subfile{sections/experience/main}
+
+% Importing projects
+\subfile{sections/projects/main}
+
+% Importing education section
+\subfile{sections/education}
+
+\end{document}

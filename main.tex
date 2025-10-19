@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage{lipsum}
-\usepackage[left=0.5cm,top=0.5cm,right=0.5cm,bottom=0.5cm]{geometry}
+\usepackage[left=1.2cm,top=0.8cm,right=1.2cm,bottom=0.5cm]{geometry}
 \usepackage{subfiles}
 \usepackage{xcolor} % For custom link colors
 \usepackage[T1]{fontenc}
@@ -17,6 +17,11 @@
 \definecolor{urlcolor}{HTML}{005ce6}
 \definecolor{h1color}{HTML}{008080}
 \definecolor{h2color}{HTML}{008080}
+
+
+\newlength{\intersectionskip}
+\setlength{\intersectionskip}{12pt}
+
 
 \newcommand{\ulhref}[2]{\href{#1}{\underline{#2}}}
 \newcommand{\boldhuge}[1]{\textbf{\huge{\textcolor{h1color}{#1}}}}
@@ -33,19 +38,12 @@
 
 \begin{document}
 
-% Importing header section
 \subfile{sections/header}
-
-% Importing skills section
+\vspace{\intersectionskip}
 \subfile{sections/skills}
-
-% Importing work experience
+\vspace{\intersectionskip}
 \subfile{sections/experience/main}
-
-% Importing projects
-\subfile{sections/projects/main}
-
-% Importing education section
+\vspace{\intersectionskip}
 \subfile{sections/education}
 
 \end{document}

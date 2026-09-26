@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 \setlength{\parindent}{0pt}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -6,7 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}
 \usepackage{lipsum}
-\usepackage[left=1.1cm,top=0.8cm,right=1.1cm,bottom=0.5cm]{geometry}
+\usepackage[left=0.4cm,top=0.4cm,right=0.4cm,bottom=0.4cm]{geometry}
 \usepackage{subfiles}
 \usepackage{xcolor} % For custom link colors
 \usepackage[T1]{fontenc}
@@ -20,12 +20,17 @@
 
 
 \newlength{\intersectionskip}
-\setlength{\intersectionskip}{12pt}
+\setlength{\intersectionskip}{8pt}
 
 
 \newcommand{\ulhref}[2]{\href{#1}{\underline{#2}}}
 \newcommand{\boldhuge}[1]{\textbf{\huge{\textcolor{h1color}{#1}}}}
 \newcommand{\boldLarge}[1]{\textbf{\Large{\textcolor{h2color}{#1}}}}
+
+% Resume list formatting - control all bullet spacing here
+\newenvironment{resumeitemize}
+  {\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=3.5pt]}
+  {\end{itemize}}
 
 \hypersetup{
     colorlinks=true,

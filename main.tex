@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 \setlength{\parindent}{0pt}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -15,21 +15,23 @@
 \renewcommand{\rmdefault}{lmss}
 
 \definecolor{urlcolor}{HTML}{005ce6}
-% \definecolor{h1color}{HTML}{008080}
-% \definecolor{h2color}{HTML}{008080}
+\definecolor{h1color}{HTML}{008080}
+\definecolor{h2color}{HTML}{008080}
 
 
 \newlength{\intersectionskip}
-\setlength{\intersectionskip}{8pt}
+\setlength{\intersectionskip}{6pt}
 
 
 \newcommand{\ulhref}[2]{\href{#1}{\underline{#2}}}
 \newcommand{\boldhuge}[1]{\textbf{\huge{\textcolor{h1color}{#1}}}}
 \newcommand{\boldLarge}[1]{\textbf{\Large{\textcolor{h2color}{#1}}}}
+\newcommand{\companyline}[2]{\textbf{\large #1} \hfill \textbf{\large #2}\\}
+\newcommand{\roleline}[2]{{\large #1 \hfill #2}}
 
 % Resume list formatting - control all bullet spacing here
 \newenvironment{resumeitemize}
-  {\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=3.5pt]}
+  {\begin{itemize}[noitemsep, topsep=1pt, partopsep=0pt, parsep=2.5pt]}
   {\end{itemize}}
 
 \hypersetup{
@@ -46,6 +48,8 @@
 \subfile{sections/header}
 \vspace{\intersectionskip}
 \subfile{sections/experience/main}
+\vspace{\intersectionskip}
+\subfile{sections/publications}
 \vspace{\intersectionskip}
 \subfile{sections/skills}
 \vspace{\intersectionskip}
